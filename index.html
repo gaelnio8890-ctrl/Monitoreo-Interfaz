@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONITOREO INTERFAZ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="encabezado-superior">
+    <div class="encabezado-izquierda">
+        <button id="boton-menu" class="boton-hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="logo-marca">
+            <div class="icono-logo-emoji">🖥️</div>
+            <div class="texto-marca">
+                <span class="titulo-marca">MONITOREO</span>
+                <span class="subtitulo-marca">INTERFAZ</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navegacion-superior">
+        <a href="#" class="enlace-navegacion active" data-view="resumen">Plataforma</a>
+        <a href="#" class="enlace-navegacion" data-view="despliegues">Despliegues</a>
+        <a href="#" class="enlace-navegacion" data-view="actividad">Actividad</a>
+    </nav>
+
+    <div class="encabezado-derecha">
+        <button id="boton-tema" class="boton-tema" aria-label="Cambiar tema">🌙</button>
+        <div class="insignia-usuario">GR</div>
+        <div class="informacion-usuario">
+            <span class="nombre-usuario">Usuario Cloud</span>
+            <span class="rol-usuario">Ingeniero Cloud</span>
+        </div>
+    </div>
+</header>
+
+<div id="capa-oscura" class="capa-oscura"></div>
+
+<div class="contenedor-aplicacion">
+    <aside id="barra-lateral" class="barra-lateral">
+        <span class="etiqueta-barra-lateral">ESPACIO DE TRABAJO</span>
+
+        <div class="tarjeta-espacio-trabajo">
+            <div class="icono-espacio-trabajo">-</div>
+            <div class="detalles-espacio-trabajo">
+                <span class="nombre-espacio-trabajo">Espacio</span>
+                <span class="sub-espacio-trabajo">Sin seleccionar</span>
+            </div>
+            <span>▾</span>
+        </div>
+
+        <span class="etiqueta-barra-lateral">MONITOREO</span>
+        <nav>
+            <ul class="menu-barra-lateral">
+                <li><a href="#" class="enlace-lateral active" data-view="resumen">Resumen <span class="flecha-activa">&gt;</span></a></li>
+                <li><a href="#" class="enlace-lateral" data-view="nodos">Nodos <span class="flecha-activa"></span></a></li>
+                <li><a href="#" class="enlace-lateral" data-view="red">Red <span class="flecha-activa"></span></a></li>
+                <li><a href="#" class="enlace-lateral" data-view="configuracion">Configuración <span class="flecha-activa"></span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="contenido-principal">
+        <section id="view-resumen" class="panel-vista active">
+            <p class="ruta-navegacion">PLATAFORMA / RESUMEN</p>
+            <h1 class="titulo-vista">Resumen del sistema</h1>
+            <p class="descripcion-vista">Estructura general de monitoreo y control.</p>
+
+            <div class="contenedor-bento">
+                <article class="tarjeta-bento tarjeta-principal">
+                    <div class="informacion-principal">
+                        <span class="etiqueta-tarjeta">CARGA DEL SISTEMA</span>
+                        <h3>Sin datos</h3>
+                        <p class="sub-tarjeta">Estado general del sistema</p>
+                    </div>
+                    <div class="circulo-principal">--</div>
+                    <div class="estadisticas-principales">
+                        <div class="elemento-estadistica">
+                            <span class="linea-estadistica"></span>
+                            <div><span class="valor-estadistica">--</span><span class="etiqueta-estadistica">Nodos activos</span></div>
+                        </div>
+                        <div class="elemento-estadistica">
+                            <span class="linea-estadistica"></span>
+                            <div><span class="valor-estadistica">--</span><span class="etiqueta-estadistica">Disponibilidad</span></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-bento tarjeta-rendimiento">
+                    <div class="encabezado-tarjeta-flex">
+                        <div><span class="etiqueta-tarjeta">RENDIMIENTO</span><h4>Carga de recursos</h4></div>
+                        <span class="boton-pastilla">Hoy</span>
+                    </div>
+                    <div class="grafica-leyenda">
+                        <span class="leyenda-cpu">● CPU</span>
+                        <span class="leyenda-ram">● RAM</span>
+                    </div>
+                    <div class="grafica-contenedor">
+                        <svg viewBox="0 0 600 200" role="img" aria-label="Rendimiento simulado de CPU y RAM">
+                            <g stroke="#e2e8f0">
+                                <path d="M0 40H600 M0 90H600 M0 140H600 M0 190H600"/>
+                            </g>
+                            <polyline fill="none" stroke="#3b82f6" stroke-width="3"
+                                points="0,130 75,110 150,135 225,70 300,100 375,55 450,85 525,45 600,65"/>
+                            <polyline fill="none" stroke="#a78bfa" stroke-width="3"
+                                points="0,155 75,145 150,150 225,125 300,130 375,110 450,115 525,90 600,105"/>
+                        </svg>
+                    </div>
+                    <div class="grafica-horas">
+                        <span>08:00</span><span>10:00</span><span>12:00</span><span>14:00</span><span>16:00</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-bento tarjeta-alertas">
+                    <div class="encabezado-tarjeta-flex">
+                        <div><span class="etiqueta-tarjeta">ACTIVIDAD</span><h4>Alertas recientes</h4></div>
+                        <a href="#" class="enlace-azul" data-view="actividad">Ver todas</a>
+                    </div>
+                    <div class="lista-alertas">
+                        <div class="alerta-item">
+                            <div class="alerta-icono alerta-roja">!</div>
+                            <div class="alerta-texto"><strong>CPU elevada</strong><p>Cloud-Server-04</p></div>
+                            <small>10:42</small>
+                        </div>
+                        <div class="alerta-item">
+                            <div class="alerta-icono alerta-amarilla">!</div>
+                            <div class="alerta-texto"><strong>Memoria elevada</strong><p>Cloud-Server-02</p></div>
+                            <small>09:35</small>
+                        </div>
+                        <div class="alerta-item">
+                            <div class="alerta-icono alerta-verde">✓</div>
+                            <div class="alerta-texto"><strong>Servicio recuperado</strong><p>Cloud-Server-01</p></div>
+                            <small>08:15</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tarjeta-bento tarjeta-servicios tarjeta-tabla">
+                    <div class="encabezado-tarjeta-flex">
+                        <div><span class="etiqueta-tarjeta">SERVICIOS</span><h4>Estado operativo</h4></div>
+                    </div>
+                    <div class="controles-tabla">
+                        <input id="buscar-servidor" type="search" placeholder="Buscar servidor o IP" aria-label="Buscar servidor">
+                        <select id="filtrar-estado" aria-label="Filtrar por estado">
+                            <option value="todos">Todos los estados</option>
+                            <option value="activo">Activos</option>
+                            <option value="inactivo">Inactivos</option>
+                            <option value="mantenimiento">Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="tabla-responsive">
+                        <table class="tabla-servidores">
+                            <thead>
+                                <tr><th>Servidor</th><th>IP</th><th>Estado</th><th>CPU</th><th>Acción</th></tr>
+                            </thead>
+                            <tbody id="cuerpo-servidores"></tbody>
+                        </table>
+                    </div>
+                    <div class="paginacion-tabla">
+                        <span id="informacion-pagina">Página 1</span>
+                        <div class="acciones-modal">
+                            <button id="pagina-anterior" class="boton-secundario" disabled>Anterior</button>
+                            <button id="pagina-siguiente" class="boton-primario">Siguiente</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button id="boton-despliegue" class="boton-flotante">Nuevo despliegue</button>
+        </section>
+
+        <section id="view-nodos" class="panel-vista">
+            <p class="ruta-navegacion">PLATAFORMA / NODOS</p>
+            <div class="vista-vacia">
+                <span class="etiqueta-tarjeta">PLATAFORMA</span>
+                <h2>Gestión de nodos</h2>
+                <p>Consulta y administración de los nodos del sistema.</p>
+                <button class="boton-regresar" data-view="resumen">Volver al resumen</button>
+            </div>
+        </section>
+
+        <section id="view-red" class="panel-vista">
+            <p class="ruta-navegacion">PLATAFORMA / RED</p>
+            <div class="vista-vacia">
+                <span class="etiqueta-tarjeta">PLATAFORMA</span>
+                <h2>Monitoreo de red</h2>
+                <p>Información y monitoreo de la red del sistema.</p>
+                <button class="boton-regresar" data-view="resumen">Volver al resumen</button>
+            </div>
+        </section>
+
+        <section id="view-despliegues" class="panel-vista">
+            <p class="ruta-navegacion">PLATAFORMA / DESPLIEGUES</p>
+            <div class="vista-vacia">
+                <span class="etiqueta-tarjeta">PLATAFORMA</span>
+                <h2>Despliegues</h2>
+                <p>Administración de despliegues del sistema.</p>
+                <button class="boton-regresar" data-view="resumen">Volver al resumen</button>
+            </div>
+        </section>
+
+        <section id="view-actividad" class="panel-vista">
+            <p class="ruta-navegacion">PLATAFORMA / ACTIVIDAD</p>
+            <div class="vista-vacia">
+                <span class="etiqueta-tarjeta">PLATAFORMA</span>
+                <h2>Actividad del sistema</h2>
+                <p>Consulta de eventos y actividad reciente de los servidores.</p>
+                <button class="boton-regresar" data-view="resumen">Volver al resumen</button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- DRAWER DE CONFIGURACIÓN -->
+<div id="drawer-fondo" class="drawer-fondo"></div>
+<aside id="drawer-configuracion" class="drawer-configuracion"
+       role="dialog" aria-modal="true" aria-labelledby="titulo-configuracion" inert>
+    <div class="drawer-encabezado">
+        <div><span class="etiqueta-tarjeta">AJUSTES</span><h3 id="titulo-configuracion">Configuración</h3></div>
+        <button id="cerrar-drawer" class="cerrar-drawer" aria-label="Cerrar configuración">&times;</button>
+    </div>
+
+    <form id="form-configuracion">
+        <div class="drawer-campo">
+            <label for="nombre-instancia">Nombre de la instancia</label>
+            <input id="nombre-instancia" type="text" value="Cloud-Server-01" required>
+        </div>
+
+        <div class="drawer-campo">
+            <label for="limite-cpu">Límite de CPU <span id="valor-cpu">70%</span></label>
+            <input id="limite-cpu" type="range" min="0" max="100" value="70">
+        </div>
+
+        <div class="drawer-campo">
+            <label for="limite-ram">Límite de RAM <span id="valor-ram">80%</span></label>
+            <input id="limite-ram" type="range" min="0" max="100" value="80">
+        </div>
+
+        <!-- NUEVOS CONTROLES FASE 4 -->
+        <div class="drawer-campo">
+            <label for="observaciones">Observaciones</label>
+            <textarea id="observaciones" rows="3" placeholder="Escribe una observación..."></textarea>
+        </div>
+
+        <div class="drawer-campo">
+            <label for="fecha-mantenimiento">Fecha de mantenimiento</label>
+            <input id="fecha-mantenimiento" type="date">
+        </div>
+
+        <div class="drawer-campo">
+            <span id="etiqueta-alertas">Activar alertas</span>
+            <label class="interruptor">
+                <input id="activar-alertas" type="checkbox" role="switch" aria-labelledby="etiqueta-alertas" checked>
+                <span class="interruptor-control"></span>
+            </label>
+        </div>
+
+        <div class="drawer-campo">
+            <label for="prioridad-alertas">Prioridad de alertas</label>
+            <select id="prioridad-alertas">
+                <option value="baja">Baja</option>
+                <option value="media" selected>Media</option>
+                <option value="alta">Alta</option>
+            </select>
+        </div>
+
+        <p id="mensaje-configuracion" class="mensaje-configuracion" role="status" aria-live="polite"></p>
+
+        <div class="drawer-acciones">
+            <button type="button" id="cancelar-configuracion" class="boton-secundario">Cancelar</button>
+            <button type="submit" id="guardar-configuracion" class="boton-primario">Guardar cambios</button>
+        </div>
+    </form>
+</aside>
+
+<!-- MODAL DE DESPLIEGUE -->
+<div id="modal-accion" class="ventana-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-despliegue">
+    <div class="contenido-modal">
+        <h3 id="titulo-despliegue">Nuevo despliegue</h3>
+        <p>¿Está seguro de que desea iniciar un nuevo despliegue?</p>
+        <div class="acciones-modal">
+            <button id="modal-cancelar" class="boton-secundario">Cancelar</button>
+            <button id="modal-confirmar" class="boton-primario">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DE REINICIO -->
+<div id="modal-reinicio" class="ventana-modal" role="dialog" aria-modal="true" aria-labelledby="titulo-reinicio">
+    <div class="contenido-modal">
+        <h3 id="titulo-reinicio">Reiniciar servidor</h3>
+        <p>¿Está seguro de que desea reiniciar <strong id="servidor-reinicio"></strong>?</p>
+        <p>Esta acción puede interrumpir temporalmente el servicio.</p>
+        <div class="acciones-modal">
+            <button id="cancelar-reinicio" class="boton-secundario">Cancelar</button>
+            <button id="confirmar-reinicio" class="boton-peligro">Reiniciar</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
